@@ -1,0 +1,24 @@
+{
+  "name": "data-aggregator",
+  "version": "0.0.1",
+  "description": "Aggregates data from different sources to plain text http GET endpoints",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --ext '.js'"
+  },
+  "repository": "git://github.com/torkildr/node-data-aggregator.git",
+  "author": {
+    "name": "Torkild Retvedt",
+    "email": "torkild@retvedt.no"
+  },
+  "dependencies": {
+    "express": ">= 3.1.0",
+    "xml2js": ">= 0.2.6"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": ">= 0.7.4"
+  }
+}
+
