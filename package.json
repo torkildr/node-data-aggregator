@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "Aggregates data from different sources to plain text http GET endpoints",
   "private": true,
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon --ext '.js'"
+    "start": "nodemon --ext '.js' server.js"
   },
   "repository": "git://github.com/torkildr/node-data-aggregator.git",
   "author": {
