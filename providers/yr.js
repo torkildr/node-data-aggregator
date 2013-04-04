@@ -1,5 +1,7 @@
 var util = require('../util');
 
+var url = "http://www.yr.no/sted/Norge/Oslo/Oslo/Oslo/varsel.xml";
+
 function extractYrPeriod(data, num) {
     var period = data.weatherdata.forecast[0].tabular[0].time[num];
     var clouds = period.symbol[0].$.name;
@@ -13,7 +15,7 @@ function extractYrPeriod(data, num) {
 }
 
 exports.forecast = function(req, res) {
-    util.xmlFile('varsel.xml', function(result) {
+    util.xmlUrl(url, function(result) {
         if (req.params.num)
             res.send(extractYrPeriod(result, req.params.num));
         else
