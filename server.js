@@ -1,13 +1,14 @@
+// sample/test implentation
+
 var express = require('express'),
     server = module.exports = express(),
-    util = require('./util'),
-    providers = require('./providers');
+    data = require('./index');
 
 var port = 8080;
 
 // routes
-server.get('/yr', providers.yr);
-server.get('/yr/:num', providers.yr);
+server.get('/yr', data.providers.yr);
+server.get('/yr/:num', data.providers.yr);
 
 // start server
 server.listen(port, function(){
